@@ -1,0 +1,9 @@
+{
+  "name": "office-design",
+  "displayName": "Office Design System",
+  "description": "Design system tokens and standards for MGC, TimeSync, and other projects.",
+  "version": "1.0.0",
+  "skills": [
+    "skills/design"
+  ]
+}
