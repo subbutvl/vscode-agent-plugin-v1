@@ -25,16 +25,26 @@ conversation — code generation, reviews, and suggestions will all follow those
 
 ## Supported Projects
 
-| Command         | Project       | File                              |
-|-----------------|---------------|-----------------------------------|
-| `/design mgc`   | MGC           | skills/design/resources/design.mgc.md      |
-| `/design timesync` | TimeSync   | skills/design/resources/design.timesync.md |
+### Internal Projects
+
+| Command            | Project   | File                                        |
+|--------------------|-----------|---------------------------------------------|
+| `/design mgc`      | MGC       | skills/design/resources/mgc.design.md       |
+| `/design timesync` | TimeSync  | skills/design/resources/timesync.design.md  |
+
+### Brand Reference Library
+
+Use `/design <brand>` with any of the following brands. Files follow the pattern `skills/design/resources/<brand>_design.md`.
+
+airbnb · airtable · apple · binance · bmw · bugatti · cal · claude · clay · clickhouse · cohere · coinbase · composio · cursor · elevenlabs · expo · ferrari · figma · framer · hashicorp · ibm · intercom · kraken · lamborghini · linear.app · lovable · mastercard · minimax · mintlify · miro · mistral.ai · mongodb · notion · nvidia · ollama · opencode.ai · pinterest · platstation · posthog · raycast · renault · replicate · resend · revolut · runwayml · sanity · sentry · shopify · spacex · spotify · starbucks · stripe · supabase · superhuman · tesla · theverge · together.ai · uber · vercel · vodafone · voltagent · warp · webflow · wired · wise · x.ai · zapier
 
 ---
 
 ## Adding a New Project
 
-1. Create a new file: `skills/design/resources/design.<projectname>.md`
+1. Create a new file using the appropriate naming pattern:
+   - Internal project: `skills/design/resources/<projectname>.design.md`
+   - Brand reference: `skills/design/resources/<projectname>_design.md`
 2. Fill in the five sections: Color Tokens, Typography, Spacing, PrimeNG Guidelines, Grid/Layout
 3. Add the project to the trigger map in `skills/design/SKILL.md`
 4. Done — the `/design <projectname>` command works immediately
@@ -63,14 +73,14 @@ Enter your Git repository URL.
 
 ```
 office-design-plugin/
-├── plugin.json                          # Plugin manifest
 ├── README.md
 └── skills/
     └── design/
         ├── SKILL.md                     # Skill instructions for the agent
         └── resources/
-            ├── design.mgc.md            # MGC design tokens
-            └── design.timesync.md       # TimeSync design tokens
+            ├── mgc.design.md            # MGC design tokens
+            ├── timesync.design.md       # TimeSync design tokens
+            └── <brand>_design.md        # Brand reference tokens (airbnb, stripe, etc.)
 ```
 
 ---

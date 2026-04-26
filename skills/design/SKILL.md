@@ -3,7 +3,15 @@ name: design
 description: >
   Load the design system standards for a specific project and apply them
   when generating or reviewing code. Usage: /design <project>
-  Supported projects: mgc, timesync
+  Supported projects: mgc, timesync, airbnb, airtable, apple, binance, bmw,
+  bugatti, cal, claude, clay, clickhouse, cohere, coinbase, composio, cursor,
+  elevenlabs, expo, ferrari, figma, framer, hashicorp, ibm, intercom, kraken,
+  lamborghini, linear.app, lovable, mastercard, minimax, mintlify, miro,
+  mistral.ai, mongodb, notion, nvidia, ollama, opencode.ai, pinterest,
+  platstation, posthog, raycast, renault, replicate, resend, revolut, runwayml,
+  sanity, sentry, shopify, spacex, spotify, starbucks, stripe, supabase,
+  superhuman, tesla, theverge, together.ai, uber, vercel, vodafone, voltagent,
+  warp, webflow, wired, wise, x.ai, zapier
 triggers:
   - /design
 ---
@@ -12,10 +20,11 @@ triggers:
 
 When this skill is invoked with `/design <project>`, do the following:
 
-1. Identify the project name from the argument (e.g. `mgc`, `timesync`).
+1. Identify the project name from the argument (e.g. `mgc`, `timesync`, `stripe`).
 2. Load the corresponding resource file from this skill's `resources/` folder:
-   - `mgc` → `resources/design.mgc.md`
-   - `timesync` → `resources/design.timesync.md`
+   - `mgc` → `resources/mgc.design.md`
+   - `timesync` → `resources/timesync.design.md`
+   - Any other brand (e.g. `stripe`) → `resources/<brand>_design.md`
 3. Read and internalize all tokens, guidelines, and rules in that file.
 4. For the rest of the conversation, enforce those standards when:
    - Generating any component, style, or layout code
